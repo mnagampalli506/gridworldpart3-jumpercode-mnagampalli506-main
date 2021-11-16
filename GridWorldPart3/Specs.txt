@@ -1,0 +1,24 @@
+Specify: Each group creates a class called Jumper. This actor can move forward two cells in each move. It “jumps” over rocks and flowers. It does not leave anything behind it when it jumps. In the small groups, discuss and clarify the details of the problem:
+ a. What will a jumper do if the location in front of it is empty, but the location two cells in front contains a flower or a rock? 
+
+The jumper will move forward only 1 space. It’s next act(), then either jump over the rock, or make a turn if the space after the rock is inaccessible.
+
+b. What will a jumper do if the location two cells in front of the jumper is out of the grid? 
+
+The jumper will move only 1 spot forward. It’s next act(), it will make 45 degree turns clockwise until it can continue into open space.
+
+c. What will a jumper do if it is facing an edge of the grid? 
+
+The jumper will turn clockwise 45 degrees until it reaches an open direction and will stay in that position until the act method is called again
+
+d. What will a jumper do if another actor (not a flower or a rock) is in the cell that is two cells in front of the jumper? 
+
+The jumper will move forward 1 space then in the next act(), it will jump over the actor unless the space after the actor is occupied, then it will make 45 degree turns until it can reach an open direction.
+
+e. What will a jumper do if it encounters another jumper in its path? 
+
+The jumper will jump over the other jumper if the other jumper is on the first spot just as if the other jumper was a flower or rock. If two spots away then like part d.
+
+f. Are there any other tests the jumper needs to make?
+Yes, if an actor/flower/rock is in the cell 1 cell in front of the jumper and another is 2 cells in front of the actor, the Jumper will turn clockwise 45 degrees. 
+
